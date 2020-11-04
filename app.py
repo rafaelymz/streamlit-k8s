@@ -13,8 +13,10 @@ def predict(text: str):
     return target_list
 
 def main():
-    image_path = "./sp_global.png"
+    image_path = "sp_global.png"
     image = Image.open(image_path)
+    if image.mode != "RGB":
+        image = image.convert("RGB")
     st.image(image, use_column_width=True)
 
     st.title("AI engineering group is awesome")
