@@ -13,7 +13,7 @@ def predict(text: str):
     return target_list
 
 def main():
-    image_path = "./spacy.jpg"
+    image_path = "./sp_global.png"
     image = Image.open(image_path)
     st.image(image, use_column_width=True)
 
